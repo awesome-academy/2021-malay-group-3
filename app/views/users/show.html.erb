@@ -9,3 +9,13 @@
     </section>
   </aside>
 </div>
+
+<div class="col-md-8">
+<% if @microposts.any? %>
+<h3><%= t(:courses) %> (<%= @courses.count %>)</h3>
+  <ol class="courses">
+  <%= render @courses %>
+  </ol>
+  <%= will_paginate @courses%>
+  <% end %>
+</div>

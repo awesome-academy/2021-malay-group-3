@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_10_03_220221) do
+ActiveRecord::Schema.define(version: 2021_10_10_074031) do
+
+  create_table "courses", charset: "utf8mb3", force: :cascade do |t|
+    t.string "course_name"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id", "created_at"], name: "index_courses_on_user_id_and_created_at"
+    t.index ["user_id"], name: "index_courses_on_user_id"
+  end
 
   create_table "users", charset: "utf8mb3", force: :cascade do |t|
     t.string "name"
@@ -28,4 +37,5 @@ ActiveRecord::Schema.define(version: 2021_10_03_220221) do
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 
+  add_foreign_key "courses", "users"
 end

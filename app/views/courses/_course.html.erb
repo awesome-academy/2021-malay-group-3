@@ -1,0 +1,11 @@
+<li id="course-<%= course.id %>">
+  <%= link_to gravatar_for(course.user, size: 50), course.user %>
+  <span class="user"><%= link_to course.user.name, course.user %></span>
+  <span class="content"><%= course.content %></span>
+  <span class="timestamp">
+    Posted <%= time_ago_in_words course.created_at %> ago.
+    <% if current_user? course.user %>
+    <%= link_to t(:delete), course, method: :delete, data: {confirm: t(:are_you_sure)} %>
+    <% end %>
+  </span>
+</li>
