@@ -9,6 +9,7 @@ import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 
 require("jquery")
+//= require jquey-ui
 import "bootstrap"
 require("@rails/ujs").start()
 require("turbolinks").start()

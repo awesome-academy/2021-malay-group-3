@@ -1,6 +1,9 @@
 my:
   course_registration_system: "Sistem Pendaftaran Kursus"
   home: "Laman Utama"
+  info: "Informasi"
+  course_registration: "Pendaftaran Kursus"
+  greet1: "Selamat Datang ke halaman utama untuk sistem pendaftaran kursus. "
   log_in: "Log Masuk"
   log_out: "Log Keluar"
   new_user: "Pengguna Baru?"
