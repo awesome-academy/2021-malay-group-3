@@ -30,7 +30,7 @@ gem 'jbuilder', '~> 2.7'
 gem 'rails-i18n'
 gem "will_paginate", git: "https://github.com/mislav/will_paginate.git", branch: "master"
 gem "bootstrap-will_paginate", "1.0.0"
-gem "faker", "2.1.2"
+gem "faker"
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
