@@ -1,0 +1,18 @@
+<h1><%= t(:courses_available) %></h1>
+<p>Here are the list of available courses.
+    <%= link_to t(:add_course), new_course_path %>
+</p>
+<ul>
+  <% @courses.each do |course| %>
+    <li>
+      <%= course.name %><br>
+    </li>
+    <p>
+      <%= t(:description) %> <%= course.description %><br>
+      <%= t(:started_at) %> <%= course.started_at %><br>
+      <%= t(:total_month) %> <%= course.total_month %><br>
+      <%= t(:total_member) %> <%= course.total_member %><br>
+      <%= t(:status) %> <%= course.status %>
+    </p>
+  <% end %>
+</ul>

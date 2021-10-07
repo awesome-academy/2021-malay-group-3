@@ -7,6 +7,7 @@
         <li><%= link_to t(:info), info_path %></li>
         <% if logged_in? %>
           <li><%= link_to t(:users), users_path %></li>
+          <li><%= link_to t(:course_offered), courses_path %></li>
           <li class="dropdown">
             <%= link_to "#", class: "dropdown-toggle", "data-toggle": "dropdown" do %>
               <%= t(:acccount) %>

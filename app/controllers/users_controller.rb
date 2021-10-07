@@ -9,6 +9,8 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find_by id: params[:id]
+    #@courses = @user.courses.paginate(page: params[:page])
+    @course = Course.find_by params[:id]
     unless @user
       flash[:danger] = t(:user_not_found)
       redirect_to root_path
