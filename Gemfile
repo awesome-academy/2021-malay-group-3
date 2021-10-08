@@ -12,7 +12,8 @@ gem 'puma', '~> 5.0'
 
 gem 'bcrypt', '3.1.13'
 gem 'bootstrap-sass', '3.4.1'
-gem 'faker'
+gem 'jquery-rails'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '>= 6'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
@@ -31,6 +32,7 @@ gem 'jbuilder', '~> 2.7'
 gem 'rails-i18n'
 gem "will_paginate", git: "https://github.com/mislav/will_paginate.git", branch: "master"
 gem "bootstrap-will_paginate", "1.0.0"
+gem "faker"
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false

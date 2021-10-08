@@ -1,11 +1,24 @@
 <% provide(:title, @user.name) %>
-<div class="row">
-  <aside class="col-md-4">
-    <section class="user_info">
-      <h1>
-        <%= gravatar_for @user %>
-        <%= @user.name %>
-      </h1>
-    </section>
-  </aside>
-</div>
+<div class="col-md-6 col-md-offset-3">
+  <div class="row">
+    <aside class="col-md-4">
+      <section class="user_info">
+        <h1>
+          <%= gravatar_for @user %>
+          <%= @user.name %>
+        </h1>
+      </section>
+    </aside>
+  </div>
+  <div>
+    <p>
+      <% if current_user? @user %>
+        <b><%= t(".apply_course") %>: </b>
+        <%= form_for @apply do |f| %>
+          <%= f.hidden_field :user_id, :value => current_user.id %>
+          <%= f.collection_select :course_id, Course.where.not(id: @ids), :id, :name, prompt: "Choose course..." %>
+          <%= f.submit t(".apply"), class: "btn btn-primary"%>
+        <% end %>
+      <% end %>
+    </p>
+  </div>

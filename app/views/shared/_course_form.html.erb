@@ -1,0 +1,6 @@
+<%= form_for Course.new do |f| %>
+  <div class="field">
+    <%= f.text_area :name, placeholder: "Apply new course..." %>
+  </div>
+    <%= f.submit "Apply", class: "btn btn-primary" %>
+<% end %>

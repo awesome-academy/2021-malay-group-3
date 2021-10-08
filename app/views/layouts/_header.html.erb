@@ -5,8 +5,9 @@
       <ul class="nav navbar-nav navbar-right">
         <li><%= link_to t(:home), root_url %></li>
         <li><%= link_to t(:info), info_path %></li>
+
         <% if logged_in? %>
-          <li><%= link_to t(:users), users_path %></li>
+          <li><%= link_to t(:user), users_path %></li>
           <li><%= link_to t(:course_offered), courses_path %></li>
           <li class="dropdown">
             <%= link_to "#", class: "dropdown-toggle", "data-toggle": "dropdown" do %>

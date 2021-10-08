@@ -10,7 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_10_07_093403) do
+ActiveRecord::Schema.define(version: 2021_10_09_061347) do
+
+  create_table "applies", charset: "utf8mb3", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "course_id"
+    t.integer "status"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "courses", charset: "utf8mb3", force: :cascade do |t|
     t.string "name"
@@ -18,14 +26,6 @@ ActiveRecord::Schema.define(version: 2021_10_07_093403) do
     t.datetime "started_at"
     t.integer "total_month"
     t.integer "total_member"
-    t.integer "status", default: 0
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "user_courses", charset: "utf8mb3", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "course_id"
     t.integer "status", default: 0
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -39,6 +39,11 @@ ActiveRecord::Schema.define(version: 2021_10_07_093403) do
     t.string "password_digest"
     t.string "remember_digest"
     t.boolean "admin", default: false
+    t.string "activation_digest"
+    t.boolean "activated", default: false
+    t.datetime "activated_at"
+    t.string "reset_digest"
+    t.datetime "reset_sent_at"
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 

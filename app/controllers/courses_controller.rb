@@ -11,6 +11,7 @@ class CoursesController < ApplicationController
 
   def create
     @course = Course.new(course_params)
+    #@course = current_user.courses.build course_params
     if @course.save
       flash[:success] = "Course is successfully registered"
       redirect_to courses_url
@@ -20,13 +21,44 @@ class CoursesController < ApplicationController
     end
   end
 
-  def show; end
+  def show
+    @course = Course.find_by(id: params[:id])
+    @apply = Apply.new
+    @ids = @course.user_ids
+  end
 
-  def edit; end
+  def edit
+    @course = Course.find_by(id: params[:id])
+  end
 
-  def destroy; end
+  def destroy
+    @course = Course.find(params[:id])
 
-  def update; end
+    if @course.status == "Available"
+      @course.destroy
+      flash[:success] = "Course was deleted!"
+      redirect_to courses_path
+    else
+      flash[:danger] = "Course already started/ended!"
+      redirect_to courses_path
+    end
+  end
+
+  def update
+    @course = Course.find(params[:id])
+
+    if @course.status == "Started"
+      @course.started_at = Time.zone.now
+    end
+
+    if @course.update(course_params)
+      flash[:success] = "Updated!"
+      redirect_to @course
+    else
+      flash[:success] = "Error 404!"
+      render :edit
+    end
+  end
 
   private
 

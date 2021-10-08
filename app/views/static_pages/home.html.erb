@@ -5,5 +5,11 @@
   <p>
     Hello and welcome. This is the home page for the course registration system.
   </p>
+  <% if logged_in? %>
+    <p>
+      You can apply more than one course or check your registration status
+    </p>
+  <% else %>
   <%= link_to t(:sign_up_now), signup_path, class: "btn btn-lg btn-primary" %>
 </div>
+<% end %>

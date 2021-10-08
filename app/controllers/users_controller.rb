@@ -11,6 +11,9 @@ class UsersController < ApplicationController
     @user = User.find_by id: params[:id]
     #@courses = @user.courses.paginate(page: params[:page])
     @course = Course.find_by params[:id]
+    @apply = Apply.new
+    @ids = current_user.course_ids
+
     unless @user
       flash[:danger] = t(:user_not_found)
       redirect_to root_path
@@ -24,9 +27,9 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      log_in @user
-      flash[:success] = t(:reminder)
-      redirect_to @user
+      @user.send_activation_email
+      flash[:info] = "Please check your email to activate your account."
+      redirect_to root_url
     else
       render :new
     end
@@ -44,7 +47,7 @@ class UsersController < ApplicationController
 
   def destroy
     @user = User.find_by(id: params[:id])
-    if user&.destroy
+    if @user&.destroy
       flash[:success] = t(:user_deleted)
     else
       flash[:danger]  = t(:delete_failed)
