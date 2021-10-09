@@ -10,6 +10,8 @@ my:
   invalid_email_password_combination: "Gabungan e-mel/kata laluan tidak sah"
   information: "Informasi"
   users: "Pengguna"
+  user: "Users"
+
   acccount: "Akaun"
   profile: "Profil"
   settings: "Tetapan"
@@ -31,3 +33,94 @@ my:
   password: "Kata Laluan"
   password_confirmation: "Pengesahan Kata Laluan"
   not_authorized: "Anda tidak mempunyai kebenaran"
+
+  courses_available: "Courses available"
+  description: "Description: "
+  started_at: "Started at: "
+  total_month: "Total month: "
+  total_member: "Total member: "
+  status: "Status: "
+  add_course: "Add Course"
+  course_offered: "Course Offered"
+  adding_course: "Adding course"
+  course_name: "Course's name: "
+  course_description: "Course's description: "
+  course_totalmonth: "Total month: "
+  course_totalmember: "Total member: "
+  course_status: "Status: "
+
+  course: "Course"
+
+  are_you_sure: "Are you sure?"
+
+  courses:
+    index:
+      list_course: "List of Courses"
+      new_course: "New Course"
+      date_updated: "Date Updated"
+      course_id: "Course ID"
+      course: "Course"
+      status: "Status"
+      duration: "Duration"
+      members: "Members"
+      detail: "Detail"
+      action: "Action"
+      remove: "Remove"
+      months: "months"
+      show: "Show"
+      edit: "Edit"
+      delete: "Delete"
+
+    show:
+      description: "Description"
+      status: "Status"
+      duration: "Duration"
+      total_member: "Total member(s)"
+      members: "Members"
+      months: "months"
+      edit: "Edit"
+      delete: "Delete"
+      back_to_course: "Back to course list"
+      apply_course: "Register course"
+      add_to_course: "Add to this course"
+      registered_student: "Enrolled Students"
+      date: "Date"
+      name: "Name"
+      status: "Status"
+      action: "Action"
+      remove: "Remove"
+      review: "Review"
+
+    new:
+      new_course: "New Course"
+
+    edit:
+      edit_course: "Edit Course"
+
+    form:
+      name: "Name"
+      description: "Description"
+      status: "Status"
+      duration: "Duration"
+      cancel: "Cancel"
+
+  applies:
+    edit:
+      permission_review: "Permission Review"
+      user: "User"
+      subject: "Subject"
+
+    course_apply:
+      apply_course: "Register course"
+      enroll: "Enroll"
+
+  users:
+    show:
+      apply_course: "Register course"
+      apply: "Register"
+      course_registered: "Courses enrolled"
+      date: "Date"
+      course: "Course"
+      status: "Status"
+      action: "Action"
+      delete: "Delete"

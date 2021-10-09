@@ -9,12 +9,19 @@ class User < ApplicationRecord
   validates :email, presence: true, length: { maximum: 255 },
                     format: { with:VALID_EMAIL_REGEX}
   validates :password, presence: true, length: {minimum: 6}, allow_nil: true
+  scope :newest, -> { order(created_at: :desc) }
 
   has_secure_password
+  has_many :applies
+  has_many :courses, through: :applies, dependent:  :destroy
 
   class << self
     def new_token
       SecureRandom.urlsafe_base64
+    end
+
+    def feed
+      courses
     end
 
     def digest string

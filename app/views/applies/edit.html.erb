@@ -1,0 +1,22 @@
+<% provide :title, t(".permission_review") %>
+
+<div class="col-md-6 col-md-offset-3">
+  <h1><%= t(".permission_review") %></h1>
+  <p><%= t(".user") %>: <%= @apply.user.name %></p >
+
+  <p><%= t(".subject") %>: <%= @apply.course.name %></p>
+
+  <%= form_with model: @apply do |form| %>
+    <div>
+      <p><%= form.select :status, Apply.statuses.keys.to_a %></p>
+    </div>
+
+    <div class="control-group">
+      <div class="controls">
+        <div>
+          <p><%= form.submit "Apply" %></p>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>

@@ -10,6 +10,7 @@ en:
   invalid_email_password_combination: "Invalid email/password combination"
   information: "Information"
   users: "Users"
+  user: "Users"
   acccount: "Account"
   profile: "Profile"
   settings: "Settings"
@@ -31,3 +32,122 @@ en:
   password: "Password"
   password_confirmation: "Password Confirmation"
   not_authorized: "You are not authorized"
+
+  course: "Course"
+
+  are_you_sure: "Are you sure?"
+
+  courses:
+    index:
+      list_course: "List of Courses"
+      new_course: "New Course"
+      date_updated: "Date Updated"
+      course_id: "Course ID"
+      course: "Course"
+      status: "Status"
+      duration: "Duration"
+      members: "Members"
+      detail: "Detail"
+      action: "Action"
+      remove: "Remove"
+      months: "months"
+      show: "Show"
+      edit: "Edit"
+      delete: "Delete"
+
+    show:
+      description: "Description"
+      status: "Status"
+      duration: "Duration"
+      total_member: "Total member(s)"
+      members: "Members"
+      months: "months"
+      edit: "Edit"
+      delete: "Delete"
+      back_to_course: "Back to course list"
+      apply_course: "Register course"
+      add_to_course: "Add to this course"
+      enrolled_student: "Enrolled Students"
+      date: "Date"
+      name: "Name"
+      status: "Status"
+      action: "Action"
+      remove: "Remove"
+      review: "Review"
+
+  course: "Course"
+
+  are_you_sure: "Are you sure?"
+
+  courses:
+    index:
+      list_course: "List of Courses"
+      new_course: "New Course"
+      date_updated: "Date Updated"
+      course_id: "Course ID"
+      course: "Course"
+      status: "Status"
+      duration: "Duration"
+      members: "Members"
+      detail: "Detail"
+      action: "Action"
+      remove: "Remove"
+      months: "months"
+      show: "Show"
+      edit: "Edit"
+      delete: "Delete"
+
+    show:
+      description: "Description"
+      status: "Status"
+      duration: "Duration"
+      total_member: "Total member(s)"
+      members: "Members"
+      months: "months"
+      edit: "Edit"
+      delete: "Delete"
+      back_to_course: "Back to course list"
+      apply_course: "Register course"
+      add_to_course: "Add to this course"
+      registered_student: "Enrolled Students"
+      date: "Date"
+      name: "Name"
+      status: "Status"
+      action: "Action"
+      remove: "Remove"
+      review: "Review"
+
+    new:
+      new_course: "New Course"
+
+    edit:
+      edit_course: "Edit Course"
+
+    form:
+      name: "Name"
+      description: "Description"
+      status: "Status"
+      duration: "Duration"
+      cancel: "Cancel"
+
+  applies:
+    edit:
+      permission_review: "Permission Review"
+      user: "User"
+      subject: "Subject"
+
+    course_apply:
+      apply_course: "Register course"
+      enroll: "Enroll"
+
+  users:
+    show:
+      apply_course: "Register course"
+      apply: "Register"
+      course_registered: "Courses enrolled"
+      date: "Date"
+      course: "Course"
+      status: "Status"
+      action: "Action"
+      delete: "Delete"
+
