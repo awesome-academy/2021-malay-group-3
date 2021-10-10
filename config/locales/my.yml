@@ -1,5 +1,10 @@
 my:
   course_registration_system: "Sistem Pendaftaran Kursus"
+  main: "Pendaftaran Kursus"
+  hello: "Salam Sejahtera dan Selamat Datang. Ini Adalah Laman Utama Sistem Pendaftaran Kursus"
+  manual: "Panduan Pendaftaran Kursus"
+  help: "Sila Ikut Langkah-langkah Berikut Untuk Mendaftar Kursus"
+  info: "Panduan"
   home: "Laman Utama"
   log_in: "Log Masuk"
   log_out: "Log Keluar"
@@ -31,3 +36,108 @@ my:
   password: "Kata Laluan"
   password_confirmation: "Pengesahan Kata Laluan"
   not_authorized: "Anda tidak mempunyai kebenaran"
+
+  forgot_password: "Lupa Kata Laluan"
+  Reset_password: "Set Semula Kata Laluan"
+  email_sent: 'Sila Periksa E-mel Anda'
+  email_not_found: "E-mel Tidak Ditemui"
+  password_reset: "Kata Laluan Telah Diset Semula"
+  check: "Sila Periksa E-mel Anda"
+  activated: "Alhamdulillah Akaun Anda Telah Berjaya Diaktifkan"
+  invalid_acivation: "Link Pengaktifan Tidak Sah"
+  static_pages:
+    home:
+      title: "Laman Utama"
+  title: "Laman Utama"
+  course: "Kursus"
+
+  are_you_sure: "Adakah Anda Pasti?"
+
+  courses:
+    index:
+      list_course: "Senarai Kursus"
+      new_course: "Kursus Baharu"
+      date_updated: "Tarikh Dikemaskini"
+      course_id: "ID Kursus"
+      course: "Kursus"
+      status: "Status"
+      duration: "Tempoh"
+      members: "Ahli"
+      detail: "Maklumat"
+      action: "Tindakan"
+      remove: "Buang"
+      months: "Bulan"
+      show: "Lihat"
+      edit: "Edit"
+      delete: "Padam"
+
+    show:
+      description: "Deskripsi"
+      status: "Status"
+      duration: "Tempoh"
+      total_member: "Jumlah Ahli"
+      members: "Ahli"
+      months: "Bulan"
+      edit: "Edit"
+      delete: "Padam"
+      back_to_course: "Kembali ke Senarai Kursus"
+      register_course: "Daftar Kursus"
+      add_to_course: "Tambah Kepada Kursus"
+      enrolled_student: "Pelajar Terdaftar"
+      date: "Tarikh"
+      name: "Nama"
+      status: "Status"
+      action: "Tindakan"
+      remove: "Hapus"
+      review: "Pilihan"
+      user: "Pengguna"
+      add_review: "Tambah Ulasan"
+
+    new:
+      new_course: "Kursus Baharu"
+
+    edit:
+      edit_course: "Edit Kursus"
+      cancel: "Batal"
+
+    form:
+      name: "Nama"
+      description: "Deskripsi"
+      status: "Status"
+      duration: "Tempoh"
+      cancel: "Batal"
+
+  registers:
+    edit:
+      permission_review: "Kebenaran Memilih"
+      user: "Pengguna"
+      subject: "Subjek"
+
+    course_register:
+      register_course: "Daftar Kursus"
+      enroll: "Daftar"
+
+  users:
+    show:
+      register_course: "Daftar Kursus"
+      register: "Daftar"
+      course_enrolled: "Kursus Terdaftar"
+      date: "Tarikh"
+      course: "Kursus"
+      status: "Status"
+      action: "Tindakan"
+      edit: "Edit"
+      delete: "Padam"
+      review: "Ulasan"
+      course: "Kursus"
+
+  reviews:
+    edit:
+      edit_review: "Edit Ulasan"
+      cancel: "Batal"
+
+    form:
+      user: "Pengguna"
+      review: "Tulis"
+      course: "Kursus"
+      notes: "Sila Beri Komen yang Jujur dan Elakkan Penggunaan Perkataan yang Tidak Sopan"

@@ -9,3 +9,79 @@
     </section>
   </aside>
 </div>
+
+<div>
+    <p>
+      <% if current_user? @user %>
+        <b><%= t(".register_course") %>: </b>
+        <%= form_for @register do |f| %>
+          <%= f.hidden_field :user_id, :value => current_user.id %>
+          <%= f.collection_select :course_id, Course.where.not(id: @ids), :id, :name, prompt: "- Please Choose the Course You Wish to Enroll -" %>
+          <%= f.submit t(".register"), class: "btn btn-primary"%>
+        <% end %>
+      <% end %>
+    </p>
+  </div>
+
+  <div class='card'>
+    <b><%= t(".course_enrolled") %>: </b><br>
+    <div class="media">
+      <div class="media-body">
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th><%= t(".date") %></th>
+              <th><%= t(".course") %></th>
+              <th><%= t(".status") %></th>
+              <% if current_user? @user %>
+                <th><%= t(".action") %></th>
+              <% end %>
+            </tr>
+          </thead>
+
+          <tbody>
+            <% @user.registers.each do |register| %>
+              <tr>
+                <td><%= register.updated_at.to_date %></td>
+                <td><%= link_to register.course.name, register.course %></td>
+                <td><%= register.status %></td>
+
+                <td>
+                  <% if current_user? @user %>
+                    <%= button_to t(".delete"), register_path(register),
+                          method: :delete,
+                          data: { confirm: t("are_you_sure") } %>
+                  <% end %>
+                </td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <div>
+      <h2><%= t(".review") %>:</h2>
+        <% @user.reviews.each do |review| %>
+          <p>
+            <strong><%= t(".course") %>:</strong>
+            <%= gravatar_for @user, size: 50 %>
+            <%= link_to review.course.name, review.course %>
+          </p>
+          <p>
+            <strong><%= t(".review") %>:</strong>
+            <%= review.content %>
+          </p>
+          <p>
+            <% if current_user? @user %>
+              <%= link_to t(".edit"), edit_review_path(review) %>
+              <%= link_to t(".delete"), review_path(review), class:"btn btn-mini",
+                    method: :delete,
+                    data: { confirm: t("are_you_sure") } %>
+            <% end %>
+          </p><br>
+        <% end %>
+    </div>
+</div>

@@ -1,0 +1,19 @@
+<%= form_for @review  do |f| %>
+  <%= render "shared/error_messages", object: @review %>
+  <%= f.hidden_field :user_id, value: current_user.id %>
+  <%= f.hidden_field :course_id, value: @course.id %>
+  <p>
+    <strong><%= t(".user") %>:</strong>
+    <%= gravatar_for current_user, size: 50 %>
+    <%= current_user.name %>
+  </p>
+  <p>
+    <strong><%= t(".course") %>:</strong>
+    <%= @course.name %>
+  </p>
+  <p>
+    <strong><%= t(".notes") %>:</strong>
+  </p>
+  <p><%= f.text_area :content, placeholder: "Your Comments..." %></p>
+  <p><%= f.submit t(".review"), class: "btn btn-primary"%></p>
+<% end %>

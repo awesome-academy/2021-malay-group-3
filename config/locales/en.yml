@@ -1,6 +1,11 @@
 en:
   course_registration_system: "Course Registration System"
   home: "Home"
+  main: "Course Registration"
+  info: "Guides"
+  manual: "Course Registration Manual"
+  hello: "Hello and welcome. This is the home page for the course registration system."
+  help: "Follow the steps below to register a course"
   log_in: "Log In"
   log_out: "Log Out"
   new_user: "New User?"
@@ -31,3 +36,108 @@ en:
   password: "Password"
   password_confirmation: "Password Confirmation"
   not_authorized: "You are not authorized"
+
+  forgot_password: "Forgot password"
+  Reset_password: "Reset Password"
+  email_sent: 'Please check your email'
+  email_not_found: "Email not found"
+  password_reset: "Password has been reset"
+  check: "Please check your email"
+  activated: "Yey account activated"
+  invalid_acivation: "Invalid activation link"
+  static_pages:
+    home:
+      title: "Home"
+  title: "Home"
+  course: "Course"
+
+  are_you_sure: "Are you sure?"
+
+  courses:
+    index:
+      list_course: "List of Courses"
+      new_course: "New Course"
+      date_updated: "Date Updated"
+      course_id: "Course ID"
+      course: "Course"
+      status: "Status"
+      duration: "Duration"
+      members: "Members"
+      detail: "Detail"
+      action: "Action"
+      remove: "Remove"
+      months: "months"
+      show: "Show"
+      edit: "Edit"
+      delete: "Delete"
+
+    show:
+      description: "Description"
+      status: "Status"
+      duration: "Duration"
+      total_member: "Total member(s)"
+      members: "Members"
+      months: "months"
+      edit: "Edit"
+      delete: "Delete"
+      back_to_course: "Back to course list"
+      register_course: "Register course"
+      add_to_course: "Add to this course"
+      enrolled_student: "Enrolled Students"
+      date: "Date"
+      name: "Name"
+      status: "Status"
+      action: "Action"
+      remove: "Remove"
+      review: "Review"
+      user: "User"
+      add_review: "Write a review"
+
+    new:
+      new_course: "New Course"
+
+    edit:
+      edit_course: "Edit Course"
+      cancel: "Cancel"
+
+    form:
+      name: "Name"
+      description: "Description"
+      status: "Status"
+      duration: "Duration"
+      cancel: "Cancel"
+
+  registers:
+    edit:
+      permission_review: "Permission Review"
+      user: "User"
+      subject: "Subject"
+
+    course_register:
+      register_course: "Register course"
+      enroll: "Apply"
+
+  users:
+    show:
+      register_course: "Register course"
+      register: "Register"
+      course_enrolled: "Courses Enrolled"
+      date: "Date"
+      course: "Course"
+      status: "Status"
+      action: "Action"
+      edit: "Edit"
+      delete: "Delete"
+      review: "Reviews"
+      course: "Course"
+
+  reviews:
+    edit:
+      edit_review: "Edit Review"
+      cancel: "Cancel"
+
+    form:
+      user: "User"
+      review: "Submit"
+      course: "Course"
+      notes: "Kindly Write Honest Comments and Refrain from Using Impolite Words"

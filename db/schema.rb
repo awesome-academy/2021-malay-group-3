@@ -10,7 +10,34 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_10_03_220221) do
+ActiveRecord::Schema.define(version: 2021_10_10_192435) do
+
+  create_table "courses", charset: "utf8mb3", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.integer "status", default: 0
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "started_at"
+    t.integer "total_month", default: 0
+    t.integer "total_member", default: 0
+  end
+
+  create_table "registers", charset: "utf8mb3", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "course_id"
+    t.integer "status", default: 0
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "reviews", charset: "utf8mb3", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "course_id"
+    t.text "content"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "users", charset: "utf8mb3", force: :cascade do |t|
     t.string "name"
