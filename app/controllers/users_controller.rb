@@ -8,7 +8,11 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find_by id: params[:id]
+    @user = User.find_by(id: params[:id])
+    @register = Register.new
+    @review = Review.new
+    @ids = current_user.course_ids
+
     unless @user
       flash[:danger] = t(:user_not_found)
       redirect_to root_path
@@ -20,10 +24,10 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.new(user_params)
+    @user = User.new user_params
     if @user.save
       @user.send_activation_email
-      flash[:info] = "Please check your email to activate your account."
+      flash[:info] = t(:check)
       redirect_to root_url
     else
       render :new
@@ -37,8 +41,8 @@ class UsersController < ApplicationController
       redirect_to @user
     else
       render "edit"
-    end
   end
+end
 
   def destroy
     @user = User.find_by(id: params[:id])
@@ -54,25 +58,18 @@ class UsersController < ApplicationController
     @user = User.find_by id: params[:id]
   end
 
+
   private
 
   def user_params
-    params.require(:user).permit(:name, :email, :password, :password_confirmation)
-  end
-
-  def logged_in_user
-    unless logged_in?
-      store_location
-      flash[:danger] = t(:please_log_in)
-      redirect_to login_url
-    end
+    params.require(:user).permit :name, :email, :password, :password_confirmation
   end
 
   def correct_user
     @user = User.find_by(id: params[:id])
     return if current_user?(@user)
-    flash[:danger] = t(:not_authorized)
-    redirect_to(root_url) unless current_user?(@user)
+    flash[:danger] = t("not_authorized")
+    redirect_to(root_url)
   end
 
   def admin_user

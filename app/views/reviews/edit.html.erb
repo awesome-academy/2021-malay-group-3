@@ -1,0 +1,7 @@
+<%= provide :title, t(".edit_review") %>
+
+<div class="container">
+  <h1><%= t(".edit_review") %></h1>
+  <%= render 'reviews/form' %>
+  <%= link_to t(".cancel"), @course %>
+</div>
